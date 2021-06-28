@@ -1,8 +1,13 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<h1>All Messages:</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<ol>
+@foreach (Message message in Model)
+{
+    <ul>
+        <li>UserName: @message.UserName</li>
+        <li>PostTime: @message.PostTime</li>
+
+    </ul>
+    <br>
+}
+</ol>
